@@ -1,0 +1,20 @@
+{
+  "name": "rate-limiter-sliding-window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "start": "ts-node server.ts",
+    "test": "ts-node test.ts",
+    "dev": "ts-node server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "devDependencies": {
+    "@types/node": "^22.19.11",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.3.0"
+  }
+}
