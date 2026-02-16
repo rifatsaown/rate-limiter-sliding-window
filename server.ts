@@ -34,7 +34,7 @@ const rateLimitMiddleware = (
 
   // Initialize empty timestamp array if this IP is making a request for the first time
   if (!ipRequests[ip]) {
-    ipRequests[ip] = [];
+    ipRequests[ip] = []; // Create new entry for this IP address with an empty array of timestamps
   }
 
   // Remove timestamps that are outside the current sliding window
