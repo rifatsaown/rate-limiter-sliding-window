@@ -20,6 +20,20 @@ The sliding window algorithm maintains a list of request timestamps for each IP 
 - No boundary conditions causing request spikes
 - Real-time limiting granularity
 
+
+It is a more accurate rate limiter using the Sliding Window algorithm in Node.js.
+
+![alt text](./infra-2.svg)
+
+The logic is more precise: instead of a simple counter, the app stores a list of timestamps for each user's recent requests. When a request arrives, the app first removes any old timestamps from the list that are outside the 1-minute rolling window.
+
+- It then counts how many timestamps are left in the list.
+- If this count is below the limit, the request is allowed, and the new timestamp is added.
+- If the count is already at the limit, the request is rejected.
+This method provides a much fairer and more accurate rate limit by creating a true rolling average.
+
+
+
 ## Project Structure
 
 ```
